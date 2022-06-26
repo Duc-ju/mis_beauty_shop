@@ -4,7 +4,7 @@ from django.contrib.auth.models import AbstractUser
 
 
 class Customer(AbstractUser):
-    phone = models.CharField(max_length=15, default=None)
-    gender = models.CharField(max_length=15, default=None)
-    displayName = models.CharField(max_length=255)
-    photoUrl = models.TextField(max_length=1023)
+    phone = models.CharField(max_length=15, null=True)
+    gender = models.CharField(max_length=15, null=True)
+    displayName = models.CharField(max_length=255, null=True)
+    photoUrl = models.TextField(max_length=1023, null=True)
